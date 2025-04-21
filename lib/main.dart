@@ -1,4 +1,5 @@
 import 'package:d4_chatapp/pages/auth/login/imports.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,11 @@ void main() async {
     SystemUiMode.manual,
     overlays: SystemUiOverlay.values,
   );
-  runApp(MyApp());
+  runApp(
+    DevicePreview(
+      builder: (context) => MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

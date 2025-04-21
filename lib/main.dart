@@ -17,6 +17,7 @@ void main() async {
   );
   runApp(
     DevicePreview(
+      enabled: false,
       builder: (context) => MyApp(),
     ),
   );
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       title: 'Chat App',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );

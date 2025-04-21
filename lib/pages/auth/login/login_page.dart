@@ -5,6 +5,21 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    Get.put(LoginController());
+    return Scaffold(
+      resizeToAvoidBottomInset: true,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              _WelcomeTexts(),
+              SizedBox(height: 50),
+              _Inputs(),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

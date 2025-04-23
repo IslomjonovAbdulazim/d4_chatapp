@@ -15,6 +15,66 @@ class _Otp extends GetView<VerifyController> {
       focusedBorderColor: context.textPrimary,
       enabledBorderColor: context.dividerColor,
       borderRadius: BorderRadius.circular(12),
+      showCursor: false,
+    );
+  }
+}
+
+class _Texts extends StatelessWidget {
+  const _Texts({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: [
+          Text(
+            "Almost there",
+            style: context.display,
+          ),
+          Text(
+            "Please enter the 6-digit code sent to your email",
+            style: context.body,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SendAgain extends GetView<VerifyController> {
+  const _SendAgain({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: [
+          SizedBox(height: 10),
+          Text(
+            "Didn’t receive any code?",
+            style: context.body,
+          ),
+          SizedBox(height: 10),
+          Obx(() {
+            return controller.isLoading.value == false
+                ? CupertinoButton(
+                    color: context.textPrimary,
+                    disabledColor: context.textPrimary,
+                    onPressed: controller.resend,
+                    child: Center(
+                      child: Text(
+                        "Resend Again",
+                        style: context.name.copyWith(
+                          color: context.backgroundColor,
+                        ),
+                      ),
+                    ),
+                  )
+                : CircularProgressIndicator();
+          }),
+        ],
+      ),
     );
   }
 }

@@ -12,7 +12,10 @@ class VerifyPage extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
+              _Texts(),
+              SizedBox(height: 50),
               _Otp(),
+              _SendAgain(),
             ],
           ),
         ),

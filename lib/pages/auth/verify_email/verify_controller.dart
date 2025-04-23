@@ -13,4 +13,13 @@ class VerifyController extends GetxController {
       isLoading.value = false;
     }
   }
+
+  void resend() async {
+    isLoading.value = true;
+
+    // connect to backend
+    await Future.delayed(Duration(seconds: 1));
+
+    isLoading.value = false;
+  }
 }

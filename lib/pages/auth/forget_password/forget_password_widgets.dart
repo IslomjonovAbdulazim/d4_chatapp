@@ -27,7 +27,40 @@ class _Input extends GetView<ForgetPasswordController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return InputWidget(
+      controller: controller.emailController,
+      focus: FocusNode(),
+      hint: "Email",
+    );
   }
 }
+
+class _Button extends GetView<ForgetPasswordController> {
+  const _Button({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Obx(() {
+      return controller.isLoading.value == true
+          ? CircularProgressIndicator()
+          : CupertinoButton(
+              color: context.textPrimary,
+              onPressed: controller.sendOtp,
+              child: Center(
+                child: Text(
+                  "Reset Password",
+                  style: context.name.copyWith(
+                    color: context.backgroundColor,
+                  ),
+                ),
+              ),
+            );
+    });
+  }
+}
+
+
+
+
+
 

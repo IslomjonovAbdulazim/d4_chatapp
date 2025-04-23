@@ -5,6 +5,18 @@ class VerifyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    Get.put(VerifyController());
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              _Otp(),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -1,3 +1,5 @@
 part of 'imports.dart';
 
-class ForgetPasswordController extends GetxController {}
+class ForgetPasswordController extends GetxController {
+  TextEditingController emailController = TextEditingController();
+}

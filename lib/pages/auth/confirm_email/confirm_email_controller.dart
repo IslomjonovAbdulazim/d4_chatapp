@@ -11,6 +11,8 @@ class ConfirmEmailController extends GetxController {
       await Future.delayed(Duration(seconds: 1));
 
       isLoading.value = false;
+
+      Get.to(ResetPasswordPage());
     }
   }
 
@@ -22,6 +24,5 @@ class ConfirmEmailController extends GetxController {
 
     isLoading.value = false;
 
-    Get.to(ResetPasswordPage());
   }
 }

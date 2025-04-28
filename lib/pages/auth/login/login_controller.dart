@@ -13,7 +13,9 @@ class LoginController extends GetxController {
 
     isLoading.value = true;
     // connect to backend
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(Duration(seconds: 0));
+
+
     isLoading.value = false;
   }
 }

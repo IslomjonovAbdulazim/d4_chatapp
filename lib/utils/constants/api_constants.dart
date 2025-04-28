@@ -7,5 +7,6 @@ class ApiConstants {
   static const registerVerify = "$baseUrl/api/v1/verify/";
   static const forgotPassword = "$baseUrl/api/v1/forgot-password/";
   static const forgotEmailConfirm = "$baseUrl/api/v1/confirm-email/";
+  static const setNewPassword = "$baseUrl/api/v1/reset-password/";
 }
 

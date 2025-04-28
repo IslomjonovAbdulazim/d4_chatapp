@@ -9,4 +9,3 @@ class ApiConstants {
   static const forgotEmailConfirm = "$baseUrl/api/v1/confirm-email/";
   static const setNewPassword = "$baseUrl/api/v1/reset-password/";
 }
-

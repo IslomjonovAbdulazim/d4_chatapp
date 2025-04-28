@@ -18,4 +18,28 @@ class LoginController extends GetxController {
 
     isLoading.value = false;
   }
+
+  Future<void> connectBackend() async {
+    final email = emailController.text.trim();
+    final password = passwordController.text.trim();
+    if (email.isEmpty || password.isEmpty) return;
+
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
